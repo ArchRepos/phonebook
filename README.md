@@ -29,6 +29,7 @@ class Person {
 ## Logic
 * Read data from file and write to file only once , when you start the application and when you close the application. 
 * Keep data inside a Collection, select one according to your need. (List, Map, Set)
+* use `stream` for searching, filtering and sorting operations
 * Needed operations: 
 ```
 1. Create person
