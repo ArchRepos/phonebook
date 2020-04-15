@@ -35,11 +35,10 @@ public class ContactsDb {
 
     }
 
-    public static void saveNewContactList() {
-        File contactsFile = new File("phonebookapp/src/main/resources/adinaFiles/contactsDb.txt");
+    public static void saveNewContactList(File file) {
 
         try (
-             BufferedWriter bufferedWriter = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(contactsFile)))) {
+                BufferedWriter bufferedWriter = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(file)))) {
             PhoneBookDriver.contactList.forEach(person -> {
                 StringBuilder contact = new StringBuilder();
                 contact.append(person.getId()).append(";").append(person.getFirstName()).append(" ").append(person.getLastName()).append("; ")
@@ -52,8 +51,7 @@ public class ContactsDb {
                     e.printStackTrace();
                 }
             });
-        }
-        catch (IOException e){
+        } catch (IOException e) {
             System.out.println("e");
         }
     }

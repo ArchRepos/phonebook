@@ -1,5 +1,6 @@
 package homeworks.adina;
 
+import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -34,7 +35,7 @@ public class PhoneBookDriver {
         deleteContact(4);
         System.out.println(contactList);
         searchPersonByPhoneNumber(" 001333333333");
-        ContactsDb.saveNewContactList();
+        ContactsDb.saveNewContactList(new File("phonebookapp/src/main/resources/adinaFiles/contactsDb.txt"));
 
     }
 
@@ -76,7 +77,6 @@ public class PhoneBookDriver {
                 .filter(person -> person.getId() == id)
                 .findFirst().orElse(null);
     }
-
 
 
 }
