@@ -39,3 +39,7 @@ class Person {
 5. Delete person
 6. Exit
 ```
+
+### Package and Run
+* package -- `mvn install`
+* run -- `java -jar target/phonebook-1.0-SNAPSHOT.jar`
