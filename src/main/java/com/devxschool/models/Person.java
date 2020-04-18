@@ -2,11 +2,14 @@ package com.devxschool.models;
 
 public class Person {
 
-    private Long ID;
+    private String ID;
     private String firstName;
     private String lastName;
 
-    public Person(Long ID, String firstName, String lastName, String phoneNumber) {
+    public Person() {
+    }
+    
+    public Person(String ID, String firstName, String lastName, String phoneNumber) {
         this.ID = ID;
         this.firstName = firstName;
         this.lastName = lastName;
@@ -15,11 +18,11 @@ public class Person {
 
     private String phoneNumber;
 
-    public Long getID() {
+    public String getID() {
         return ID;
     }
 
-    public void setID(Long ID) {
+    public void setID(String ID) {
         this.ID = ID;
     }
 
