@@ -39,6 +39,29 @@ class Person {
 5. Delete person
 6. Exit
 ```
+## Database connection
++ create database
+  - ```sql
+      create database phonebook;
+    ```
++ grant privileges to user: 
+
+  - ```sql 
+      grant all privileges on phonebook.* to ph_user@'localhost' identified by 'ph_password'; 
+    ```
++ switch to database
+  - ```sql
+      use phonebook;
+    ```
++ create table
+  - ```sql
+      create table person(
+        id int not null auto_increment primary key,
+        first_name varchar(255),
+        last_name varchar(255),
+        phone varchar(255)
+      )
+    ```
 
 ### Package and Run
 * package -- `mvn install`
