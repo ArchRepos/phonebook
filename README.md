@@ -63,7 +63,17 @@ class Person {
         phone varchar(255)
       )
     ```
-
++ person schema: 
+```bash
++------------+--------------+------+-----+---------+----------------+
+| Field      | Type         | Null | Key | Default | Extra          |
++------------+--------------+------+-----+---------+----------------+
+| id         | int(11)      | NO   | PRI | NULL    | auto_increment |
+| first_name | varchar(255) | YES  |     | NULL    |                |
+| last_name  | varchar(255) | YES  |     | NULL    |                |
+| phone      | varchar(255) | YES  |     | NULL    |                |
++------------+--------------+------+-----+---------+----------------+
+```
 ### Package and Run
 * package -- `mvn install`
 * run -- `java -jar target/phonebook-1.0-SNAPSHOT.jar`
