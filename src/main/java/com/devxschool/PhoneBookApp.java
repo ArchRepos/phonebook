@@ -1,6 +1,7 @@
 package com.devxschool;
 
 import com.devxschool.models.Person;
+import com.devxschool.services.PhoneBookDBService;
 import com.devxschool.services.PhoneBookService;
 
 import java.util.List;
@@ -11,8 +12,8 @@ public class PhoneBookApp {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         String filePath = "myrecords.txt";
-        PhoneBookService phoneBookService = new PhoneBookService(filePath);
-
+        //PhoneBookService phoneBookService = new PhoneBookService(filePath);
+        PhoneBookDBService phoneBookService = new PhoneBookDBService();
         while (true){
             drawInterface();
             String command = input.nextLine();
@@ -66,7 +67,7 @@ public class PhoneBookApp {
                     phoneBookService.delete(id);
                     break;
                 case 5:
-                    phoneBookService.flushAllRecordsToFile();
+                  //  phoneBookService.flushAllRecordsToFile();
                     System.exit(0);
                     break;
                 default:

@@ -7,6 +7,7 @@ public interface Service<T> {
     Optional<T> getByID(String id);
     Optional<T> getByNameAndSurname(String name, String surname);
     List<T> searchByFilter(String filter);
+    List<T> getAll();
     long count();
     void save(T t);
     void delete(String id);

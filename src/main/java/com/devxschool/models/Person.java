@@ -5,6 +5,7 @@ public class Person {
     private String ID;
     private String firstName;
     private String lastName;
+    private String phoneNumber;
 
     public Person() {
     }
@@ -15,8 +16,6 @@ public class Person {
         this.lastName = lastName;
         this.phoneNumber = phoneNumber;
     }
-
-    private String phoneNumber;
 
     public String getID() {
         return ID;
