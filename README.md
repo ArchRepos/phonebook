@@ -1,6 +1,7 @@
 # Command line phone book application
 
-Application will store and read data from a text file. 
+Application can store and read data from a text file and database aswell.
+
 ## file format and Domain: 
 ```ID;Name Surname;phone number```
 
